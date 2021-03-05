@@ -46,12 +46,14 @@
   >   >
   >   > > JDK=JRE+编译和运行等命令工具
 
+  :hamburger:
+
   
-
+  
   * 总结：
-    * 运行Java程序的最小环境是JRE
+  * 运行Java程序的最小环境是JRE
     * 开发Java程序的最小环境是JDK
-
+  
   
   
   # jdk文件里的jre用来运行编译
