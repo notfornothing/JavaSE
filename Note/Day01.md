@@ -41,23 +41,29 @@
   > * **JDK：Java的开发环境 （开发工具包）**
   >
   >   JDK(Java Development Kit) --- Java开发工具包
-  >   
+  >
   >   > 包含JRE还包含了Java开发程序所必须的命令工具
   >   >
   >   > > JDK=JRE+编译和运行等命令工具
+  >   
+  >   :hamburger:
+  >   
+  >   * **JDK中包含JRE，在JDK的安装目录下有一个名为jre的目录，里面有两个文件夹bin和lib，在这里可以认为bin里的就是jvm，lib中则是jvm工作所需要的类库，而jvm和 lib和起来就称为jre。‘’
+  >   
+  >   * **JVM = bin目录**
+  >   
+  >   * **lib表示JVM工作所需要的类库,也就是：JRE = lib + bin**
+  >   
+  >   * **JDK = JRE + JAVA的开发工具（javac.exe,java.exe,javadoc.exe）**
 
-  :hamburger:
-
-  
-  
-  * 总结：
+  * **总结：**
   * 运行Java程序的最小环境是JRE
     * 开发Java程序的最小环境是JDK
+
   
-  
-  
+
   # jdk文件里的jre用来运行编译
-  
+
   # 一般用外面的jre用来运行java程序
-  
+
   
