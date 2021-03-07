@@ -21,11 +21,9 @@ public class Test5_BubbleSort_Pro {
     private static int[] getSort(int[] arr) {
         int temp;
         boolean flag=false;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length-1; i++) {
             flag = true;
             for (int j = 0; j < arr.length-1-i; j++) {//把xiao的浮上去
-
-
                 if (arr[j+1] > arr[j]) {//
                     temp=arr[j];
                     arr[j] = arr[j+1];
