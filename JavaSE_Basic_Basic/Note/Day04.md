@@ -6,14 +6,14 @@
 
 * ## continue结束本次循环并且马上进入下一个循环
 
-* >  for循环会执行后面i++
+  > **for循环会执行后面i++**
   >
   >  ```java 
-  >  for(int i=0;i<5;i++){
+  >for(int i=0;i<5;i++){
   >  	if(i==2){
-  >           i--;
+  >         i--;
   >  		continue;
-  >  	}
+  >    	}
   >  	System.out.print(i);
   >  }
   >  //0134

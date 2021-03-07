@@ -75,6 +75,7 @@ public class TestDemo2 {
         String next = sc.nextLine();
         //我这里是装蠢,为了多了解到一些方法
 
+
         char[] charArray = next.toCharArray();
 
         int[] nums = new int[charArray.length];
