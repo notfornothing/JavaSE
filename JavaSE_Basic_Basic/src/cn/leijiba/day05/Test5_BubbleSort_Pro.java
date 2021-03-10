@@ -1,5 +1,6 @@
 package cn.leijiba.day05;
 
+
 import java.util.Random;
 /**
  * @Author notfornothing
@@ -15,7 +16,6 @@ public class Test5_BubbleSort_Pro {
         ) {
             System.out.print(i+" ");
         }
-
     }
 
     private static int[] getSort(int[] arr) {

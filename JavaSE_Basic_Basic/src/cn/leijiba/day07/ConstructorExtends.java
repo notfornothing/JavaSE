@@ -3,7 +3,8 @@ package cn.leijiba.day07;
 
 public class ConstructorExtends  {
     int i;
-    ConstructorExtends() {
+    //父类最好还是加上无参构造
+    ConstructorExtends(int j) {
         System.out.println("FFFFFFF");
     }
 }
@@ -11,6 +12,7 @@ public class ConstructorExtends  {
 class Z extends ConstructorExtends{
     int i;
     Z() {
+        super(1);
         System.out.println("ZZZZZZZZ");
     }
     public static void main(String[] args) {
