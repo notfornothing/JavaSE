@@ -4,7 +4,7 @@ package cn.leijiba.day10;
  * @Author notfornothing
  * @Date 2021/3/11 21:15
  */
-public class Test2_userInter {
+public class ImplClassExtendsDiff {
     public static void main(String[] args) {
 
     }
