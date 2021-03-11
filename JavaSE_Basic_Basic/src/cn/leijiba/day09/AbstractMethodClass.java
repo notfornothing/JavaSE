@@ -25,7 +25,7 @@ abstract class Animal2{
     public void  method(){}
     //4.定义抽象方法fly()
     /**1.没有方法体的方法叫做抽象方法,被关键字abstract修饰*/
-    public abstract void fly();
+     abstract void fly();
     public abstract void fly2();
 
 }

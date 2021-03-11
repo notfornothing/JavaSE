@@ -12,13 +12,9 @@
 
 #### **位置**:
 
-* **平时敲的Demo:**
+* [**平时敲的Demo(点击即可跳转)**](https://github.com/notfornothing/JavaSE/tree/main/JavaSE_Basic_Basic/src/cn/leijiba)
 
-  > JavaSE_Basic_Basic/src/cn/leijiba/
+* [**对应的总结笔记(点击即可跳转)**](https://github.com/notfornothing/JavaSE/tree/main/JavaSE_Basic_Basic/Note)
 
-* **对应的总结笔记**
-
-  > ./JavaSE_Basic_Basic/Note
-
-# Markdown 怎么跳转?
+  
 

@@ -10,12 +10,6 @@
 
 #### **Location**:
 
-* **Usually typed Demo:**
+* [**Usually typed Demo(Click to jump)**](https://github.com/notfornothing/JavaSE/tree/main/JavaSE_Basic_Basic/src/cn/leijiba)
+* [**Corresponding summary notes(Click to jump)**](https://github.com/notfornothing/JavaSE/tree/main/JavaSE_Basic_Basic/Note)
 
-   > JavaSE_Basic_Basic/src/cn/leijiba/
-
-* **Corresponding summary notes**
-
-   > ./JavaSE_Basic_Basic/Note
-
-# Markdown How to jump?

@@ -4,6 +4,18 @@
 
 
 
+# 思考接口为什么不能protected (default) private ,只能public
+
+**接口实现类重写方法可以重载吗?**有关继承和多态
+
+参考[这里](https://www.cnblogs.com/leolztang/p/6041222.html) 写入Day10
+
+
+
+---
+
+
+
 
 
 
