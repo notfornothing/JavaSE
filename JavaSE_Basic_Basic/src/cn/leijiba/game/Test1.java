@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Test1 {
     public static void main(String[] args) {
 
-
         Soldier soldier = new Soldier();
         soldier.setBlood(100);
         soldier.setId("number001");

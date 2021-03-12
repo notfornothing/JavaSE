@@ -16,14 +16,15 @@ public class AK47 {
     public void reload(int i) {
         setBullet(i);
     }
-
     public AK47(int bullet) {
         this.bullet = bullet;
     }
 
+
     public void setBullet(int bullet) {
         this.bullet = bullet;
     }
+
 
     public int fire() {
 
