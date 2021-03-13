@@ -162,7 +162,7 @@ Integer i=1;
 Integer i=Integer.valueOf(1);
 ```
 
-关于Integer的高效:(了解即可)[]
+[关于Integer的高效:了解即可==>由此去源代码](https://github.com/notfornothing/JavaSE/blob/main/JavaSE_Basic_Basic/src/cn/leijiba/day11/Test6_Integer.java)
 
 * ```java
       private static void integerTest2() {
@@ -220,7 +220,7 @@ sout 默认打印的是他的toString方法
 
 ---
 
-String =" "  和String str=new String(" ")的区别==>StringTest.java
+String =" "  和String str=new String(" ")的区别==>[StringTest.java](https://github.com/notfornothing/JavaSE/blob/main/JavaSE_Basic_Basic/src/cn/leijiba/day11/StringTest.java)
 
 > [基于 == 判断的,因为 == 是比较的地址值.](https://blog.csdn.net/justloveyou_/article/details/52464440)
 
