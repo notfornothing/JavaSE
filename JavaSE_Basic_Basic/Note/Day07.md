@@ -68,6 +68,9 @@ public class Z extends F{
     }
     public static void main(String[] args) {
         Z z = new Z();
+        //FFFFFFF
+        //ZZZZZZZZ
+
     }
 }
 ```
@@ -75,6 +78,10 @@ public class Z extends F{
 # 子类继承父类,重写的那个方法还能重载吗?
 
 > ## 可以
+
+# 重载返回值类型不一样也是重载
+
+---
 
 # 父类最好还是加上无参构造,怕你子类构造时忘了给super传参
 

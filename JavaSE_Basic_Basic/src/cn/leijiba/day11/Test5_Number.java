@@ -10,7 +10,7 @@ package cn.leijiba.day11;
  */
 public class Test5_Number {
     public static void main(String[] args) {
-        doubleTest();
+        integerTest();
     }
 
     public static void doubleTest() {

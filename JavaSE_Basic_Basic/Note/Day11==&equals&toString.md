@@ -10,6 +10,8 @@
 
 一般把常量写 前面 即 "常量".equals() 防止空指针异常
 
+* 初衷:就是判断两个对象的 content 是否相同.
+
 ---
 
 Objects类:
@@ -154,6 +156,60 @@ char[] chars=new char[10]
 
   但是在其他范围内存的是两个对象(**只要Integer有这个高效**)
 
+```java
+Integer i=1;
+等价于
+Integer i=Integer.valueOf(1);
+```
+
+关于Integer的高效:(了解即可)[]
+
+* ```java
+      private static void integerTest2() {
+          Integer i1 = Integer.valueOf((int)666);
+          Integer i2 = Integer.valueOf((int)666);
+          Integer i3 = new Integer((int) 666);
+          Integer i4 = new Integer((int) 666);
+          System.out.println(i1==i2);//false
+          System.out.println(i3==i4);//false
+      }
+  
+      private static void integerTestEqual() {
+          Integer i1 = Integer.valueOf((int)6);
+          Integer i2 = Integer.valueOf((int)6);
+          Integer i3 = new Integer((int) 6);
+          Integer i4 = new Integer((int) 6);
+          System.out.println(i1==i2);//true
+          System.out.println(i3==i4);//false
+      }
+  
+      public static void integerTest() {
+          Integer i1=  6;
+          Integer i2 = 6;
+          Integer i3 = new Integer(6);
+          Integer i4 = new Integer(6);
+          System.out.println(i1 == i2);//true
+          System.out.println(i3 == i4);//false
+      }
+  
+     public static void main(String[] args) {
+          integerTest();
+          integerTest2();
+          System.out.println("=========|");
+          //为什么会输出 true  false
+          //下面的是反编译,这是
+          integerTestEqual();
+          //可以看到i1 i2 以自动装箱的方式创建
+          //i3  i4以构造方法的方式创建
+  
+          //那为啥会有true返回呢?
+          //因为Integer在valueOf()第一次 调用时.会创建-128~127直接的实例
+          //加到缓存,后续调用valueOf方法时,会返回缓存中的实例.
+          //所以指向同一内存地址 为true.
+          // 所以integerTest2 超过了127的最大值.你自己可以进valueOf方法里看.
+      }
+  ```
+
 
 
 # String
@@ -251,11 +307,34 @@ public static void main(String[] args) {
 
 
 
+# 思考 成员变量为自定义的类型,那么equals是否调用该成员变量的equals方法呢?toString呢?
+
+---
+
+是的,所以应该重写 equals和toString
+
+* 其中toString调用的是 hashCode的默认.所以应该重写才好
+
+* 重写的 equals 调用的是基本数据类型的是用==.引用数据类型调用的是 Objects.equals(a,b)
+
+  > 我看了一下他的实现,就是去调用a 的equals方法.所以说要重写才好.免得到时候equals判断半天还不等于.免得踩坑
 
 
 
+下面有关于Objects的quals方法
 
+# 好像还有一个Objects类
 
+---
+
+主要用到的是Objects类的 Objects.equals
+
+```java
+    public static boolean equals(Object a, Object b) {
+        return (a == b) || (a != null && a.equals(b));
+    }
+
+```
 
 
 

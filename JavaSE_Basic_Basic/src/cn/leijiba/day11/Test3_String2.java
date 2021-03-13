@@ -17,9 +17,11 @@ public class Test3_String2 {
         }
         byte[] bytes = s.getBytes();
         long t2 = System.currentTimeMillis();
+        String s1 = new String(bytes);
         System.out.println(result);
         System.out.println(t2-t1);
         System.out.println(Arrays.toString(bytes));
+        System.out.println(s1);
 
     }
 }
