@@ -1,8 +1,10 @@
 
 
-# Fix nofornothing homePage
+# finally 和return 在try catch里 顺序问题
 
 ---
+
+
 
 
 
