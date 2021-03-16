@@ -1,5 +1,13 @@
 
 
+# Properties类
+
+---
+
+和IO流结合看看
+
+
+
 # finally 和return 在try catch里 顺序问题
 
 ---
