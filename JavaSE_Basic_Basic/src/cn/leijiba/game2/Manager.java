@@ -1,4 +1,4 @@
-package cn.leijiba.gam2;
+package cn.leijiba.game2;
 
 import java.util.ArrayList;
 
