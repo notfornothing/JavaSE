@@ -8,10 +8,7 @@ package cn.leijiba.game3;
 import java.io.*;
 import java.security.Key;
 import java.security.Policy;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 
 /**
  * # 自己弄个文件复制的
@@ -21,6 +18,7 @@ import java.util.Set;
  * 和IO流结合看看
  */
 public class Prop {
+    //获取配置文件的 键值对 返回map集合
     public static Map<String, String> getMap(String fileName) throws IOException {
         Properties properties = new Properties();
         properties.load(new BufferedReader(new FileReader(fileName)));
@@ -31,14 +29,18 @@ public class Prop {
         }
         return map;
     }
-
-    public static boolean storeProp(String fileName,File SRC,File destination) throws IOException {
-        String src = SRC.toString();
-        String dddd = destination.toString();
+    //<key from,value to>
+    //设置值.
+    public static boolean storeProp(String fileName,Map<String,String> map) throws IOException {
         Properties properties = new Properties();
-        properties.setProperty(src, dddd);
+        properties.load(new FileReader(fileName));
+        Set<Map.Entry<String, String>> entries = map.entrySet();
+        Iterator<Map.Entry<String, String>> it = entries.iterator();
+        for (int i = 0; i < map.size(); i++) {
+            Map.Entry<String, String> next = it.next();
+            properties.setProperty(next.getKey(), next.getValue());
+        }
         properties.store(new FileWriter(fileName),"左边源文件,右边是目的地");
         return true;
     }
-
 }
