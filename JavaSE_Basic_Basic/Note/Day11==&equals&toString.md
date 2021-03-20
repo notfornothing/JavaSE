@@ -293,7 +293,13 @@ public static void main(String[] args) {
 * getBytes --转成byte[]
 * **subString** --截取子串 左闭右开 [)
 
+对于String的这些方法:
 
+可以用字符串常量来解释:所以他返回的值是变的
+
+```java
+"abcdefg".substring(2, 6);
+```
 
 # String 和 StringBuffer 和 String 
 
