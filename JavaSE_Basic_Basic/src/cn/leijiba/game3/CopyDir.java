@@ -114,7 +114,7 @@ public class CopyDir {
     private  void setPath() {
         File file = new File("JavaSE_Basic_Basic/girls");
         File[] files = file.listFiles();
-        String ddd = "C:\\Users\\Administrator\\Desktop\\";
+        String ddd = "C:\\Users\\Administrator\\Desktop\\test\\";
         HashMap<String, String> map = new HashMap<>();
         for (int i = 0; i < files.length; i++) {
             map.put(files[i].getAbsolutePath(), ddd +"\\"+ files[i].getName());

@@ -1,4 +1,4 @@
-package cn.leijiba.game3;
+package cn.leijiba.game4;
 
 /**
  * @Author notfornothing
@@ -9,11 +9,10 @@ import java.io.*;
 import java.security.Key;
 import java.security.Policy;
 import java.util.*;
-
 /**
  * # 自己弄个文件复制的
  * ---
- * # Properties类
+ * # Properties
  * ---
  * 和IO流结合看看
  */
