@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         CopyDir copyDir = new CopyDir("C:\\Users\\Administrator\\Desktop\\1.properties");
         copyDir.setProp("C:\\Users\\Administrator\\Desktop\\1.properties");
-        copyDir.store("C:\\Users\\Administrator\\Desktop\\应用软件","C:\\Users\\Administrator\\Desktop\\test\\");
+        copyDir.store();
         copyDir.cp();
     }
 }

@@ -29,7 +29,5 @@ public class Test1 {
             }
             s = new Scanner(System.in).nextLine();
         }
-
-
     }
 }
