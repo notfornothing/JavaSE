@@ -1,7 +1,7 @@
-package cn.leijiba.test;
+import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.Random;
+        import java.util.Arrays;
+        import java.util.Random;
 
 /**
  * @Author notfornothing
@@ -9,14 +9,14 @@ import java.util.Random;
  */
 
 public class Action {
-//求一个长度为10的数组最大元素, 随机的方式赋值并输出各元素
+    //求一个长度为10的数组最大元素, 随机的方式赋值并输出各元素
     public static void main(String[] args) {
+
+
         int[] ints = new int[10];
         Random random = new Random();
-        for (int i = 0; i < ints.length; i++) {
-            ints[i] = random.nextInt();
-        }
-        int max = ints[0];
+        for (int i = 0; i < ints.length; i++) { ints[i] = random.nextInt();
+        }int max = ints[0];
         for (int i = 1; i <ints.length ; i++) {
             if (max < ints[i]) {
                 max = ints[i];
@@ -24,5 +24,10 @@ public class Action {
         }
         System.out.println("最大值为:"+max);
         System.out.println(Arrays.toString(ints));
+    }
+
+    @Test
+    public void test() {
+        System.out.println('a'+4);
     }
 }

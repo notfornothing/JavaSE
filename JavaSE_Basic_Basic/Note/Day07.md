@@ -75,6 +75,49 @@ public class Z extends F{
 }
 ```
 
+# 有关继承的代码块和构造方法的执行顺序
+
+```java
+//A静态代码块
+//B静态代码块
+//A构造代码块
+//A的构造方法
+//B造代码块
+//B构造方法
+public class OOPTest {
+    public static void main(String[] args) {
+        B b = new B();
+
+    }
+}
+class A{
+    static {
+        System.out.println("A静态代码块");
+    }
+    {
+        System.out.println("A构造代码块");
+    }
+    public A() {
+        System.out.println("A的构造方法");
+    }
+}
+class B extends A{
+    static {
+        System.out.println("B静态代码块");
+    }
+    {
+        System.out.println("B造代码块");
+    }
+    public B() {
+        super();
+        System.out.println("B构造方法");
+    }
+}
+
+```
+
+
+
 # 子类继承父类,重写的那个方法还能重载吗?
 
 > ## 可以

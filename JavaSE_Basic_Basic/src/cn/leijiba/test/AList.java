@@ -1,5 +1,7 @@
 package cn.leijiba.test;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 
 /**
@@ -10,7 +12,7 @@ public class AList {
     public static void main(String[] args) {
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("adsf");
-        arrayList.add("123123");
+        arrayList.add("laksdfjalsdkfjafsldkj");
         arrayList.add("ooooo");
         arrayList.add("qqqqqq");
         arrayList.add("wwwww");
@@ -20,9 +22,10 @@ public class AList {
             if (i == arrayList.size() - 1) {
                 System.out.println("}");
                 break;
-            } else {
+            } else  {
                 System.out.print("@");
             }
+            System.out.println("asdlf");
         }
     }
 }

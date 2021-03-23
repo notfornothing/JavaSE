@@ -17,7 +17,7 @@ import java.util.*;
  * ---
  * 和IO流结合看看
  */
-public class Prop {
+public class Prop  {
     //获取配置文件的 键值对 返回map集合
     public static Map<String, String> getMap(String fileName) throws IOException {
         Properties properties = new Properties();

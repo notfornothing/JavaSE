@@ -1,5 +1,19 @@
 
 
+# StringBuffer 和StringBuilder
+
+---
+
+源码查看,线程安全的不同
+
+
+
+# 单例模式
+
+---
+
+为什么懒汉式 要加锁?
+
 
 
 # Start和run 对象的问题
@@ -48,6 +62,10 @@
 
 
 
+
+
+
+
 # 异常 final return??????????????????
 
 ___
@@ -61,3 +79,4 @@ ___
 # sort排序
 
 # Java isDigit() 方法 来自Java Character类的静态方法.判断是否为字符
+
