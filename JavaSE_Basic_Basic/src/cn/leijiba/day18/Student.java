@@ -6,6 +6,7 @@ package cn.leijiba.day18;
  */
 public class Student {
     public int age;
+    int a;
     public String name;
 
     public Student(int age, String name) {

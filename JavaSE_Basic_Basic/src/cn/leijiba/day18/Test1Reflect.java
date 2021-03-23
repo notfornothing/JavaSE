@@ -62,7 +62,7 @@ public class Test1Reflect {
     }
 
     @Test
-    public void getFields() {
+    public void getFields() throws NoSuchFieldException {
         Class<?> clazz = new Student().getClass();
         Field[] fields = clazz.getFields();
         System.out.println(Arrays.toString(fields));
