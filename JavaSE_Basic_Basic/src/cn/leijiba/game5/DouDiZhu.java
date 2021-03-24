@@ -1,5 +1,6 @@
 package cn.leijiba.game5;
 
+import java.awt.event.ItemListener;
 import java.util.*;
 
 /**
@@ -8,20 +9,22 @@ import java.util.*;
  */
 public class DouDiZhu {
     public static void main(String[] args) {
-
         Map<Integer, String> map = getNum();
-        ArrayList<String> p1 = new ArrayList<>();
-        ArrayList<String> p2 = new ArrayList<>();
-        ArrayList<String> p3 = new ArrayList<>();
+        ArrayList<Integer> p1 = new ArrayList<>();
+        ArrayList<Integer> p2 = new ArrayList<>();
+        ArrayList<Integer> p3 = new ArrayList<>();
         Set<Integer> integers = map.keySet();
         Iterator<Integer> it = integers.iterator();
-        ArrayList<String> all = new ArrayList<>();
-
-        ArrayList<String> last = new ArrayList<>();
+        ArrayList<Integer> all = new ArrayList<>();
+        ArrayList<Integer> last = new ArrayList<>();
+        int j=0;
         while (it.hasNext()) {
-            all.add(map.get(it.next()));
+            it.next();
+            all.add(j);
+            j++;
         }
-        int size = map.size();
+        Collections.shuffle(all);
+        int size = all.size();
             for (int i = 0; i < size; i++) {
                 if (size - i <= 3) {
                     last.add(all.get(i));
@@ -35,24 +38,30 @@ public class DouDiZhu {
                 if (i % 3 == 2) {
                     p3.add(all.get(i));
                 }
-
         }
-
-        showNum(p1,p2,p3,last);
+        showOwn(p1,map);
+        showOwn(p2,map);
+        showOwn(p3,map);
+        showOwn(last,map);
     }
 
-    private static void  showNum(ArrayList<String> p1, ArrayList<String> p2, ArrayList<String> p3, ArrayList<String> last) {
+    private static void showOwn(ArrayList<Integer> p1,Map<Integer,String > map) {
 
-        System.out.println("==========================");
-        Collections.sort(p1);
-        Collections.sort(p2);
-        Collections.sort(p3);
-        Collections.sort(last);
-        System.out.println(p1.size()+"=="+p1);
-        System.out.println(p2.size()+"=="+p2);
-        System.out.println(p3.size()+"=="+p3);
-        System.out.println(last.size()+"=="+last);
+        ArrayList<String> list = new ArrayList<>();
+        for (Integer integer : p1) {
+            list.add(map.get(integer));
+        }
+        Collections.sort(list, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
+            }
+        });
+        System.out.println(list.size()+"=="+ list);
+
     }
+
+
 
     private static Map<Integer,String> getNum() {
 
@@ -72,13 +81,10 @@ public class DouDiZhu {
         }
         all.add("大王");
         all.add("小王");
-        System.out.println(all);
-        Collections.shuffle(all);
         HashMap<Integer, String> map = new HashMap<>();
         for (int i = 0; i < all.size(); i++) {
             map.put(i, all.get(i));
         }
-        System.out.println(all);
         return map;
     }
 

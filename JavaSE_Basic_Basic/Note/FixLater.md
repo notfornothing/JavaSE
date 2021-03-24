@@ -1,5 +1,13 @@
 
 
+# 为什么饿汉式不加锁,懒汉式才加
+
+---
+
+大概是Object o=newobject那里的区别
+
+
+
 # StringBuffer 和StringBuilder
 
 ---

@@ -313,6 +313,8 @@ public static void main(String[] args) {
 
 
 
+
+
 # 思考 成员变量为自定义的类型,那么equals是否调用该成员变量的equals方法呢?toString呢?
 
 ---
@@ -328,6 +330,42 @@ public static void main(String[] args) {
 
 
 下面有关于Objects的quals方法
+
+## Stringbuffer是线程安全的:
+
+> **他是从JDK1.0版本就有的,他是线程安全**
+> **StringBuffer源码有**:
+>
+> ```java
+>     @Override
+>     public synchronized int length() {
+>         return count;
+>     }
+> 
+>     @Override
+>     public synchronized int capacity() {
+>         return value.length;
+>     }
+> 
+> 
+>     @Override
+>     public synchronized void ensureCapacity(int minimumCapacity) {
+>         if (minimumCapacity > value.length) {
+>             expandCapacity(minimumCapacity);
+>         }
+>     }
+> ```
+>
+
+
+
+## Stringbuilder 不是线程安全的
+
+> - **从版本JDK 5开始，这个类别已经被一个等级类补充了，这个类被设计为使用一个线程Stringbuilder类,Stringbuilder应该使用Stringbuilder类，因为它支持所有相同的操作，但它更快，因为它不执行同步。** 
+>
+> **Stringbuilder没有synchronized锁** ,**所以他不是线程安全的.**
+
+
 
 # 好像还有一个Objects类
 
