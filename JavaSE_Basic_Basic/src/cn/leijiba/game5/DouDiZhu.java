@@ -51,6 +51,7 @@ public class DouDiZhu {
         for (Integer integer : p1) {
             list.add(map.get(integer));
         }
+
         Collections.sort(list, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {

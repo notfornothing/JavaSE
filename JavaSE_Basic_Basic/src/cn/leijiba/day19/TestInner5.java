@@ -15,9 +15,8 @@ public class TestInner5 {
                 System.out.println("ksadjflasf");
             }
 
-            @Override
             public void save() {
-
+               //这不是重写
             }
 
             @Override
@@ -43,13 +42,21 @@ public class TestInner5 {
             }
         }.play();
 
+        new Inner4() {
+            @Override
+            public void p() {
+                System.out.println("shit");
+            }
+        };
     }
 }
 
 interface Inner1 {
     void get();
 
-    void save();
+ public static    void save() {
+     System.out.println("asdf");
+ }
 
     public abstract void method1();
 }

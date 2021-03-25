@@ -14,6 +14,11 @@ public class Student {
     }
 
 
+    public void show() {
+        System.out.println(name+":"+age);
+        System.out.println("hello world");
+    }
+
     private void update() {
         System.out.println("updating!lll!!");
     }

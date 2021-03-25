@@ -26,6 +26,10 @@ public class TestReflect {
         System.out.println(field.get(student));
     }
 
+
+
+
+
     @Test
     public void getMethod() throws Exception {
         Class<?> clazz = Class.forName("cn.leijiba.test.Student");
